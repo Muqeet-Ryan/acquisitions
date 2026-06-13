@@ -7,6 +7,7 @@ import cors from 'cors';
 import { timestamp } from 'drizzle-orm/gel-core';
 
 import authRoutes from '#routes/auth.routes.js';
+import usersRoutes from '#routes/users.routes.js';
 import securityMiddleware from '#middlewares/security.middleware.js';
 
 const app = express();
@@ -38,9 +39,7 @@ app.get('/health', (req,res) => {
 });
 
 app.use('/api/auth', authRoutes);
-
-
-
+app.use('/api/users', usersRoutes);
 
 
 export default app;

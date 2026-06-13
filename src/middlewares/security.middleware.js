@@ -10,13 +10,13 @@ const securityMiddleware = async (req, res, next) => {
 
     switch (role) {
       case 'admin':
-        limit = 20;
+        limit = 30;
         break;
       case 'user':
-        limit = 10;
+        limit = 15;
         break;
       case 'guest':
-        limit = 5;
+        limit = 10;
         break;
     }
 
